@@ -61,3 +61,57 @@ graph TD
     G -- Evet --> H[LED & Alarmı Kapat]
     H --> I[Buluta 'İlaç Alındı' Bilgisi Gönder]
     I --> D
+---
+
+## 💰 Maliyet Analizi ve Bütçe (BOM & Cost Analysis)
+
+Bu proje için İzmir/Türkiye yerel elektronik tedarikçileri ve piyasa ortalamaları baz alınarak hazırlanan tahmini bütçe tablosu aşağıdadır:
+
+| # | Bileşen / Malzeme | Adet / Miktar | Ortalama Fiyat (TL) | Toplam Tutar |
+| :--- | :--- | :---: | :---: | :---: |
+| **1** | ESP32 NodeMCU Wi-Fi + BT Geliştirme Kartı | 1 Adet | 220 ₺ | 220 ₺ |
+| **2** | 0.96 inç I2C OLED Ekran (128x64) | 1 Adet | 110 ₺ | 110 ₺ |
+| **3** | WS2812B Adreslenebilir RGB Şerit LED (60 LED/m) | 1 Metre | 180 ₺ | 180 ₺ |
+| **4** | DFPlayer Mini MP3 Modülü + 3W Küçük Hoparlör | 1 Set | 160 ₺ | 160 ₺ |
+| **5** | Reed Switch (Mıknatıslı Kapak Sensörü) + Mıknatıs | 21 Set | 15 ₺ / Adet | 315 ₺ |
+| **6** | TP4056 Şarj Modülü + USB-C Dişi Breakout Kartı | 1 Set | 65 ₺ | 65 ₺ |
+| **7** | 18650 Li-ion Pil (2500 mAh) *(İsteğe Bağlı)* | 1 Adet | 140 ₺ | 140 ₺ |
+| **8** | 4-Kanal 3.3V/5V Logic Level Shifter | 1 Adet | 45 ₺ | 45 ₺ |
+| **9** | Delikli İki Tarafı Bakır Plaket (Proto-PCB) + Jumper Kablo | 1 Set | 90 ₺ | 90 ₺ |
+| **10**| 3D Baskı Filamenti (PLA/PETG ~350g) | ~0.35 kg | 300 ₺ / kg | 105 ₺ |
+| **TOPLAM** | **Tahmini Prototip Maliyeti** | | | **~1.430 ₺** |
+
+> 📌 **Not:** Seri üretim aşamasında PCB basımı ve toplu bileşen alımlarıyla birim maliyet **%35-40 oranında düşerek** yaklaşık **850 - 900 ₺** bandına geriletilebilir.
+
+---
+
+## 🛠️ Arka Donanım Haznesi Montaj ve Birleştirme Rehberi
+
+Cihazın arkasındaki **özel kapalı donanım odasına** tüm elektronik modüllerin adım adım nasıl birleştirilip yerleştirileceği aşağıda detaylandırılmıştır:
+
+### 🔌 Step-by-Step Bağlantı ve Montaj Adımları
+
+#### 1. Güç ve Şarj Hattının Kurulumu
+* Kasanın yan tarafındaki USB-C portuna dişi soket oturtulur.
+* USB-C'den gelen 5V güç hattı **TP4056** şarj modülüne bağlanır.
+* 18650 Li-ion pil, TP4056 modülünün `B+` ve `B-` klemenslerine lehimlenir. TP4056'nın `OUT+` çıkışı ise **ESP32'nin VIN (5V)** pinine güç sağlar.
+
+#### 2. Şerit LED ve Hücre Aydınlatması
+* WS2812B şerit LED kesilmeden, 21 bölmenin altından yılan (`S` şeklinde) çizerek kesintisiz geçirilir.
+* Şerit LED'in **5V ve GND** besleme hatları doğrudan güç devresine bağlanır.
+* **Data (DIN)** hattı, ESP32'nin 3.3V sinyalini 5V'a yükselten **Logic Level Shifter** üzerinden `GPIO 16` pinine bağlanır.
+
+#### 3. Ekran ve Ses Modülü Entegrasyonu
+* Üst yuvadaki **OLED Ekran** I2C bağlantıları:
+  * `SDA` ➔ `GPIO 21`
+  * `SCL` ➔ `GPIO 22`
+* **DFPlayer Mini** MP3 modülünün TX/RX uçları `GPIO 17` ve `GPIO 16` pinlerine bağlanır. Hoparlör doğrudan DFPlayer üzerindeki ses çıkışlarına lehimlenir.
+
+#### 4. 21 Adet Kapak Sensörünün Matris Bağlantısı
+* Sensörlerin pin tasarrufu sağlaması adına Reed Switch'ler **3 Satır × 7 Sütun (Matrix)** yapısında birbirine bağlanır.
+* Her kapağın iç kısmına bir neodyum mıknatıs yerleştirilir. Kapak kapandığında devre iletken olur; kapak açıldığında devre kesilerek ESP32'ye "İlaç Alındı" sinyali gönderilir.
+
+#### 5. Donanım Haznesine Sabitleme
+* Tüm küçük modüller (ESP32, TP4056, Level Shifter) delikli prototip plakete lehimlenir.
+* Plaket, kasanın arkasında yer alan kapalı hazneye M2 vidalar veya sıcak silikon ile sabitlenir.
+* Kablo düzeni cırt kelepçelerle sağlandıktan sonra arka kapak kapatılarak montaj tamamlanır.
