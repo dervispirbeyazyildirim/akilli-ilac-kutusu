@@ -1,3 +1,4 @@
+<img width="2816" height="1536" alt="Ürünün son hali " src="https://github.com/user-attachments/assets/fb741a9c-677e-47b3-a98d-32843d63c67c" />
 # 💊 Akıllı IoT İlaç Kutusu (Smart IoT Pillbox)
 
 ![Project Banner](https://via.placeholder.com/1200x400.png?text=Smart+IoT+Pillbox+Project) <!-- Buraya Shapr3D kapak görselini koyabilirsin -->
