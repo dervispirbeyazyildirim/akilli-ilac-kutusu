@@ -61,7 +61,6 @@ graph TD
     G -- Evet --> H[LED & Alarmı Kapat]
     H --> I[Buluta 'İlaç Alındı' Bilgisi Gönder]
     I --> D
----
 
 ## 💰 Maliyet Analizi ve Bütçe (BOM & Cost Analysis)
 
