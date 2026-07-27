@@ -70,7 +70,7 @@ Bu proje için İzmir/Türkiye yerel elektronik tedarikçileri ve piyasa ortalam
 | # | Bileşen / Malzeme | Adet / Miktar | Ortalama Fiyat (TL) | Toplam Tutar |
 | :--- | :--- | :---: | :---: | :---: |
 | **1** | ESP32 NodeMCU Wi-Fi + BT Geliştirme Kartı | 1 Adet | 220 ₺ | 220 ₺ |
-| **2** | 0.96 inç I2C OLED Ekran (128x64) | 1 Adet | 110 ₺ | 110 ₺ |
+| **2** | 2.23 inç I2C OLED Ekran (128x32) | 1 Adet | 790 ₺ | 790 ₺ |
 | **3** | WS2812B Adreslenebilir RGB Şerit LED (60 LED/m) | 1 Metre | 180 ₺ | 180 ₺ |
 | **4** | DFPlayer Mini MP3 Modülü + 3W Küçük Hoparlör | 1 Set | 160 ₺ | 160 ₺ |
 | **5** | Reed Switch (Mıknatıslı Kapak Sensörü) + Mıknatıs | 21 Set | 15 ₺ / Adet | 315 ₺ |
@@ -79,7 +79,7 @@ Bu proje için İzmir/Türkiye yerel elektronik tedarikçileri ve piyasa ortalam
 | **8** | 4-Kanal 3.3V/5V Logic Level Shifter | 1 Adet | 45 ₺ | 45 ₺ |
 | **9** | Delikli İki Tarafı Bakır Plaket (Proto-PCB) + Jumper Kablo | 1 Set | 90 ₺ | 90 ₺ |
 | **10**| 3D Baskı Filamenti (PLA/PETG ~350g) | ~0.35 kg | 300 ₺ / kg | 105 ₺ |
-| **TOPLAM** | **Tahmini Prototip Maliyeti** | | | **~1.430 ₺** |
+| **TOPLAM** | **Tahmini Prototip Maliyeti** | | | **~2.110 ₺** |
 
 > 📌 **Not:** Seri üretim aşamasında PCB basımı ve toplu bileşen alımlarıyla birim maliyet **%35-40 oranında düşerek** yaklaşık **850 - 900 ₺** bandına geriletilebilir.
 
