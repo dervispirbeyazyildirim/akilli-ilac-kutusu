@@ -112,11 +112,10 @@ Cihazın arkasındaki **özel kapalı donanım odasına** tüm elektronik modül
 * Her kapağın iç kısmına bir neodyum mıknatıs yerleştirilir. Kapak kapandığında devre iletken olur; kapak açıldığında devre kesilerek
 * ESP32'ye "İlaç Alındı" sinyali gönderilir.
 
-* -----------------------------------------------------------------------------------------------------------------------------------
-* <img width="1408" height="768" alt="Poster şeklinde ürün malzemeleri" src="https://github.com/user-attachments/assets/56e0db73-348c-49a1-bacb-d2ac33c7395f" />
-
-
 #### 5. Donanım Haznesine Sabitleme
 * Tüm küçük modüller (ESP32, TP4056, Level Shifter) delikli prototip plakete lehimlenir.
 * Plaket, kasanın arkasında yer alan kapalı hazneye M2 vidalar veya sıcak silikon ile sabitlenir.
 * Kablo düzeni cırt kelepçelerle sağlandıktan sonra arka kapak kapatılarak montaj tamamlanır.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+* <img width="1408" height="768" alt="Poster şeklinde ürün malzemeleri" src="https://github.com/user-attachments/assets/56e0db73-348c-49a1-bacb-d2ac33c7395f" />
