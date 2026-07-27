@@ -26,7 +26,7 @@
 | Bileşen | Adet | Açıklama |
 | :--- | :---: | :--- |
 | **ESP32 NodeMCU** | 1 | Ana kontrolcü (Wi-Fi + Bluetooth) |
-| **0.96" I2C OLED Ekran** | 1 | Durum ve saat bilgi ekranı |
+| **2.23" I2C OLED Ekran** | 1 | Durum ve saat bilgi ekranı |
 | **WS2812B Adreslenebilir RGB LED** | 1 m (21 LED) | Bölme bazlı görsel ikaz |
 | **DFPlayer Mini + Hoparlör** | 1 Set | Sesli ikaz ve mp3 bildirimleri |
 | **Kapak Takip Sensörleri** | 21 | Reed Switch / IR Sensör |
