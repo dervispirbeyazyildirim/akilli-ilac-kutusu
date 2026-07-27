@@ -60,8 +60,3 @@ graph TD
     G -- Evet --> H[LED & Alarmı Kapat]
     H --> I[Buluta 'İlaç Alındı' Bilgisi Gönder]
     I --> D
----
-
-## 📷 Proje Görselleri ve 3D Kasa Tasarımı
-
-![Akıllı İlaç Kutusu 3D Tasarımı](Ürünün son hali .png)
